@@ -1,0 +1,21 @@
+# TradingView-Binance 自动量化交易系统 依赖文件
+# 安装命令: pip install -r requirements.txt
+
+# Web框架 - 用于接收TradingView Webhook信号
+fastapi==0.104.1
+uvicorn==0.24.0
+
+# 币安官方API SDK
+python-binance==1.0.19
+
+# 配置管理 - 从.env文件读取环境变量
+python-dotenv==1.0.0
+
+# 数据验证 - 用于验证Webhook信号格式
+pydantic==2.5.2
+
+# HTTP请求 - 用于发送通知
+requests==2.31.0
+
+# 时区处理
+pytz==2023.3

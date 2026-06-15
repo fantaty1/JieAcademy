@@ -1,0 +1,31 @@
+# 环境配置文件（包含敏感信息）
+.env
+
+# Python虚拟环境
+venv/
+.venv/
+ENV/
+
+# Python缓存文件
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# 日志文件
+logs/
+
+# IDE配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# 系统文件
+.DS_Store
+Thumbs.db
+
+# 分发/packaging
+dist/
+build/
+*.egg-info/

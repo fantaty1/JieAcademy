@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer | Personal Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">&lt;/dev&gt;</a>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-content">
+        <div class="avatar">
+          <div class="avatar-placeholder">&lt;/&gt;</div>
+        </div>
+        <p class="greeting">Hello, I'm</p>
+        <h1 class="name">Your Name</h1>
+        <p class="title">Full Stack Developer</p>
+        <p class="bio">
+          // Passionate about clean code and elegant solutions.<br>
+          // Building things for the web, one line at a time.
+        </p>
+        <div class="hero-links">
+          <a href="https://github.com/" target="_blank" class="social-link">GitHub</a>
+          <a href="#contact" class="social-link primary">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section class="section" id="skills">
+    <div class="container">
+      <h2 class="section-title">&lt;Skills /&gt;</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Vue</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="tag">Node.js</span>
+            <span class="tag">Python</span>
+            <span class="tag">Java</span>
+            <span class="tag">Go</span>
+            <span class="tag">SQL</span>
+            <span class="tag">MongoDB</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Tools & Others</h3>
+          <div class="skill-tags">
+            <span class="tag">Git</span>
+            <span class="tag">Docker</span>
+            <span class="tag">Linux</span>
+            <span class="tag">CI/CD</span>
+            <span class="tag">AWS</span>
+            <span class="tag">Figma</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section class="section section-dark" id="projects">
+    <div class="container">
+      <h2 class="section-title">&lt;Projects /&gt;</h2>
+      <div class="projects-grid">
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#9633;</span>
+            <div class="project-links">
+              <a href="#" target="_blank">&#8599;</a>
+            </div>
+          </div>
+          <h3 class="project-name">Project Alpha</h3>
+          <p class="project-desc">
+            A brief description of this project. What problem does it solve?
+            What was your role and contribution?
+          </p>
+          <div class="project-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>MongoDB</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#9633;</span>
+            <div class="project-links">
+              <a href="#" target="_blank">&#8599;</a>
+            </div>
+          </div>
+          <h3 class="project-name">Project Beta</h3>
+          <p class="project-desc">
+            A brief description of this project. What problem does it solve?
+            What was your role and contribution?
+          </p>
+          <div class="project-tech">
+            <span>Vue</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
+          </div>
+        </article>
+
+        <article class="project-card">
+          <div class="project-header">
+            <span class="project-icon">&#9633;</span>
+            <div class="project-links">
+              <a href="#" target="_blank">&#8599;</a>
+            </div>
+          </div>
+          <h3 class="project-name">Project Gamma</h3>
+          <p class="project-desc">
+            A brief description of this project. What problem does it solve?
+            What was your role and contribution?
+          </p>
+          <div class="project-tech">
+            <span>Go</span>
+            <span>Docker</span>
+            <span>AWS</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section" id="contact">
+    <div class="container">
+      <h2 class="section-title">&lt;Contact /&gt;</h2>
+      <div class="contact-content">
+        <p class="contact-text">
+          // I'm currently open to new opportunities.<br>
+          // Feel free to reach out!
+        </p>
+        <div class="contact-links">
+          <a href="mailto:your@email.com" class="contact-item">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">your@email.com</span>
+          </a>
+          <a href="https://github.com/" target="_blank" class="contact-item">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">github.com/yourname</span>
+          </a>
+          <a href="#" class="contact-item">
+            <span class="contact-label">WeChat</span>
+            <span class="contact-value">your_wechat_id</span>
+          </a>
+          <a href="#" class="contact-item">
+            <span class="contact-label">Blog</span>
+            <span class="contact-value">yourblog.com</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 Your Name. Built with &lt;3 and clean code.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

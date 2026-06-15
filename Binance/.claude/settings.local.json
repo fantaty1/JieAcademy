@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item *)",
+      "PowerShell(python -c \"import hmac; print\\(dir\\(hmac\\)\\)\" 2>&1)"
+    ]
+  }
+}

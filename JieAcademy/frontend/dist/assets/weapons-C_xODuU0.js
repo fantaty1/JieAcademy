@@ -1,0 +1,1 @@
+import{l as o}from"./index-DhGailTT.js";function a(e){return o.get("/weapons/",{params:e})}function s(e){return o.get(`/weapons/${e}/`)}function r(e,n){return o.get(`/weapons/${e}/combos/`,{params:n})}export{s as a,r as b,a as g};

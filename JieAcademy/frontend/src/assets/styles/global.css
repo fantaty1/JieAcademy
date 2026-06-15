@@ -1,0 +1,261 @@
+/* 劫学院 — 高级浅色优雅武侠风主题 (Premium Light Theme) */
+:root {
+  /* 主背景 */
+  --bg-primary: #F9FAFB;
+  --bg-secondary: #FFFFFF;
+  --bg-tertiary: #F3F4F6;
+  --bg-warm: #FFFDF8;
+
+  /* 主题色 - 典雅金与墨青 */
+  --accent-gold: #B8860B;
+  --accent-gold-light: #D4AF37;
+  --accent-gold-bg: rgba(184, 134, 11, 0.08);
+  --accent-cyan: #008B8B;
+  --accent-cyan-bg: rgba(0, 139, 139, 0.08);
+  --accent-red: #E63946;
+  --accent-red-light: #F28482;
+
+  /* 文字 */
+  --text-primary: #1F2937;
+  --text-secondary: #4B5563;
+  --text-muted: #9CA3AF;
+  --text-light: #374151;
+
+  /* 边框与毛玻璃 */
+  --border-default: rgba(0, 0, 0, 0.08);
+  --border-light: rgba(0, 0, 0, 0.04);
+  --border-hover: rgba(184, 134, 11, 0.3);
+  
+  --glass-bg: rgba(255, 255, 255, 0.75);
+  --glass-border: rgba(255, 255, 255, 0.6);
+
+  /* 阴影 */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.12);
+  --shadow-hover: 0 8px 32px rgba(184, 134, 11, 0.15);
+  --shadow-glow: 0 0 20px rgba(184, 134, 11, 0.2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+  /* 隐藏默认滚动条，在全屏滚动页面我们会自定义 */
+}
+
+body {
+  font-family: "Inter", "Noto Serif SC", "Source Han Serif SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: var(--accent-gold);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-gold-light);
+  text-shadow: 0 0 8px rgba(212, 175, 55, 0.2);
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-gold);
+}
+
+/* ==========================================
+   全屏滚动辅助类 (Full Page Snap)
+   ========================================== */
+.snap-container {
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.snap-section {
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ==========================================
+   长文档阅读样式 — 核心 (Document/Tutorial Styles)
+   ========================================== */
+.doc-body {
+  color: var(--text-light);
+  line-height: 2;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  background: var(--bg-secondary);
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-light);
+}
+
+.doc-body h1 {
+  font-size: 36px;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 0 0 32px 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-default);
+  letter-spacing: 2px;
+  font-family: "Noto Serif SC", serif;
+  background: linear-gradient(120deg, var(--text-primary), var(--accent-gold));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.doc-body h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 48px 0 24px;
+  padding-left: 16px;
+  border-left: 4px solid var(--accent-gold);
+  letter-spacing: 1px;
+}
+
+.doc-body h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 32px 0 16px;
+}
+
+.doc-body p {
+  margin-bottom: 20px;
+  text-align: justify;
+  color: var(--text-secondary);
+}
+
+.doc-body ul,
+.doc-body ol {
+  padding-left: 1.5em;
+  margin-bottom: 20px;
+  color: var(--text-secondary);
+}
+
+.doc-body li {
+  margin-bottom: 10px;
+}
+
+.doc-body strong {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+.doc-body code {
+  background: var(--bg-tertiary);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: var(--accent-cyan);
+  font-family: "Fira Code", "Consolas", monospace;
+  border: 1px solid var(--border-default);
+}
+
+.doc-body pre {
+  background: var(--bg-primary);
+  padding: 24px;
+  border-radius: 12px;
+  overflow-x: auto;
+  margin: 24px 0;
+  border: 1px solid var(--border-default);
+  box-shadow: inset 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.doc-body pre code {
+  background: none;
+  padding: 0;
+  border: none;
+  color: var(--text-light);
+}
+
+.doc-body blockquote {
+  border-left: 4px solid var(--accent-gold);
+  padding: 20px 24px;
+  margin: 24px 0;
+  background: linear-gradient(90deg, var(--accent-gold-bg), transparent);
+  border-radius: 0 12px 12px 0;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+.doc-body img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin: 32px 0;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-default);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.doc-body img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-hover);
+}
+
+.doc-body hr {
+  border: none;
+  border-top: 1px solid var(--border-default);
+  margin: 40px 0;
+}
+
+/* ==========================================
+   Element Plus 浅色覆盖
+   ========================================== */
+.el-button--primary {
+  --el-button-bg-color: var(--accent-gold) !important;
+  --el-button-border-color: var(--accent-gold) !important;
+  --el-button-hover-bg-color: var(--accent-gold-light) !important;
+  --el-button-hover-border-color: var(--accent-gold-light) !important;
+  --el-button-text-color: #FFFFFF !important;
+}
+
+.el-dropdown-menu {
+  background-color: var(--bg-secondary) !important;
+  border: 1px solid var(--border-light) !important;
+  box-shadow: var(--shadow-lg) !important;
+}
+
+.el-dropdown-menu__item {
+  color: var(--text-primary) !important;
+}
+
+.el-dropdown-menu__item:not(.is-disabled):hover {
+  background-color: var(--accent-gold-bg) !important;
+  color: var(--accent-gold) !important;
+}
