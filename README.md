@@ -2,7 +2,7 @@
   <img src="docs/logo.png" alt="JieAcademy Logo" width="300px"/>
 </p>
 
-<h1 align="center">⚔️ 劫招社 JieAcademy ⚔️</h1>
+<h1 align="center">⚔️ 劫学院 JieAcademy ⚔️</h1>
 
 <p align="center"><strong>面向《永劫无间》玩家的开源硬核教学社区</strong></p>
 <p align="center">收录武器与英雄教学内容、用户鉴权与投稿系统、管理后台等功能。</p>
