@@ -1,1 +1,0 @@
-import{l as t}from"./index-DhGailTT.js";function s(e){return t.get("/heroes/",{params:e})}function n(e){return t.get(`/heroes/${e}/`)}function u(e,r){return t.get(`/heroes/${e}/combos/`,{params:r})}function g(e,r){return t.get(`/heroes/${e}/matchups/`,{params:r})}export{n as a,u as b,g as c,s as g};
