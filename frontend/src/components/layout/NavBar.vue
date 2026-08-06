@@ -1,11 +1,8 @@
 <template>
   <header class="navbar" :class="{ 'scrolled': isScrolled }">
     <div class="navbar-inner">
-      <router-link to="/" class="brand">
-        <div class="brand-icon-wrapper">
-          <span class="brand-icon">剑</span>
-        </div>
-        <span class="brand-text">劫学院</span>
+      <router-link to="/" class="brand" aria-label="劫招社">
+        <img src="/project-logo.png" alt="劫招社" class="brand-logo" />
       </router-link>
 
       <nav class="nav-menu">
@@ -76,16 +73,19 @@ function handleCommand(command) {
   left: 0;
   right: 0;
   height: 72px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
 }
 
 .navbar.scrolled {
-  background: var(--glass-bg);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--glass-border);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   height: 64px;
@@ -109,51 +109,25 @@ function handleCommand(command) {
   group: hover;
 }
 
-.brand-icon-wrapper {
-  width: 40px;
-  height: 40px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, var(--accent-gold), #8A6420);
-  padding: 2px;
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.brand-logo {
+  display: block;
+  height: 44px;
+  width: auto;
+  transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-.brand:hover .brand-icon-wrapper {
+.brand:hover .brand-logo {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
-}
-
-.brand-icon {
-  width: 100%;
-  height: 100%;
-  background: var(--bg-primary);
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: 800;
-  color: var(--accent-gold-light);
-  font-family: "Noto Serif SC", serif;
-}
-
-.brand-text {
-  font-size: 22px;
-  font-weight: 800;
-  color: var(--text-primary);
-  letter-spacing: 4px;
-  font-family: "Noto Serif SC", serif;
-  text-transform: uppercase;
+  filter: drop-shadow(0 4px 10px rgba(184, 134, 11, 0.35));
 }
 
 .nav-menu {
   display: flex;
   gap: 8px;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.55);
   padding: 6px;
   border-radius: 100px;
-  border: 1px solid rgba(255,255,255,0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
 }
 
 .nav-link {
